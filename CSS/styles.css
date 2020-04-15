@@ -35,3 +35,20 @@ body{
     float: right;
     margin-top: -125px;
 }
+.carrito:hover .table-car{
+    width: 290px;
+    position:fixed;
+    position: absolute;
+    display: block;
+    right:0;
+    background-color: white;
+    top:100%;
+    z-index: 1;
+    margin-left:1200px;
+    padding: 20px;
+    
+}
+
+.table-car{
+    display: none;
+}
