@@ -1,24 +1,22 @@
-/* import { Api } from '../services/ApiConsumer';
-const api = Api(); */
+import { Interfaz, showCarShopping, objet } from "./Interfaz.js";
+const interfaz = new Interfaz();
 export class Home {
   constructor() {
-    this.createShoppingCard();
+    this.createCarShopping();
   }
-
-  createShoppingCard() {
-    const carShopping = document
-      .querySelector("#buttonShoppingCar")
-      .addEventListener("mouseover", () => {
-        const showCarShopping = document.querySelector("#carShoppingCard");
-        showCarShopping.innerHTML = `<li class="collection-item avatar">
-                                      <img src="img/93154211_240902656962032_510511237415567360_n.png" alt="" class="circle">
-                                        <span class="title">Title</span>
-                                          <p>First Line <br>
-                                                 Second Line
-                                          </p>
-                                      <a href="#!" class="secondary-content"><i class="material-icons">attach_money</i></a>
-                                    </li>`;
+  createCarShopping() {
+    if (objet.length <= 0) {
+      showCarShopping.innerHTML = `<p class="center-align">El carrito esta vacio</p>`
+    } else {
+      objet.map((p) => {
+        let li = document.createElement("LI");
+        li.classList.add("collection-item");
+        li.classList.add("avatar");
+        li.setAttribute("id", p.id);
+        li.innerHTML = interfaz.carShopping(p.img, p.product, p.description);
+        showCarShopping.appendChild(li);
       });
+    }
   }
 }
 
