@@ -2,19 +2,10 @@ body{
     background-color:#cecaca;
 }
 
-#logo{
-    margin-bottom:20px;
-    margin-left: 15px;
-    width: 30.6666666667%;
-    opacity: 0.5;
-    border-radius: 10px;
+.logo{
+    width: 60px;
 }
-.lg{
-    height: 85px;
-    display:flex;
-    float: left;
-    
-}
+
 .nav-wrapper{
     background: #741d51; /* Old browsers */ 
     background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */ 
@@ -36,18 +27,18 @@ body{
     margin-top: -125px;
 }
 .carrito:hover .table-car{
-    width: 290px;
-    position:fixed;
+    width: 100%;
     position: absolute;
+    position:fixed;
     display: block;
-    right:0;
-    background-color: white;
-    top:100%;
+    right:-1075px;
+    bottom: 40px;
     z-index: 1;
-    margin-left:1200px;
-    padding: 20px;
-    
 }
+.collection{
+    background: #fff;
+}
+
 
 .table-car{
     display: none;
