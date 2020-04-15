@@ -6,7 +6,7 @@ export class Home {
   }
   createCarShopping() {
     if (objet.length <= 0) {
-      showCarShopping.innerHTML = `<p class="center-align">El carrito esta vacio</p>`
+      showCarShopping.innerHTML = `<p class="center-align">El carrito esta vacio</p>`;
     } else {
       objet.map((p) => {
         let li = document.createElement("LI");
