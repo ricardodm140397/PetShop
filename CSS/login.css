@@ -28,3 +28,6 @@ form {
     display: block;
     content: '';
 }
+.logo{
+    width: 60px;
+}
