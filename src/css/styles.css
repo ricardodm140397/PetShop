@@ -2,7 +2,10 @@ body{
     background-color:#cecaca;
 }
 
-.logo{
+header{
+    padding: 0;
+}
+header .logo{
     width: 60px;
 }
 

@@ -1,0 +1,4 @@
+{
+    /* version que va a soportar */
+    "presets": ["babel/preset-env"]
+}
