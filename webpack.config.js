@@ -20,7 +20,7 @@ module.exports = {
     open: true,
   },
   module: {
-    /*
+    
     // Babel config 
     rules: [
       {
@@ -30,7 +30,7 @@ module.exports = {
           loader: 'babel-loader'
         }
       }
-    ] */
+    ],
 
     rules: [
       {
@@ -44,10 +44,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.html",
+      chunks: []
     }),
     new HtmlWebpackPlugin({
       filename: "login.html",
       template: "src/login.html",
+      chunks: []
     })
   ],
 };

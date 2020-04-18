@@ -17,7 +17,7 @@ export class Home {
         li.classList.add("collection-item");
         li.classList.add("avatar");
         li.setAttribute("id", p.id);
-        li.innerHTML = interfaz.carShopping(p.img, p.product, p.description);
+        li.innerHTML = interfaz.carShopping(p.img, p.product, p.price);
         showCarShopping.appendChild(li);
       });
     }
