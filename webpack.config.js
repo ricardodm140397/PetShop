@@ -7,7 +7,7 @@ module.exports = {
     login: "./src/js/login/login.js",
     home: "./src/js/home/home.js",
     profile: "./src/js/profile/profile.js",
-    purchasesMade: "./src/js/purchasesMade/purchasesMade.js",
+    products: "./src/js/products/products.js",
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -20,16 +20,15 @@ module.exports = {
     open: true,
   },
   module: {
-    
-    // Babel config 
+    // Babel config
     rules: [
       {
-        test: /\.js$/ ,
-        exclude: '/node_modules/',
+        test: /\.js$/,
+        exclude: "/node_modules/",
         use: {
-          loader: 'babel-loader'
-        }
-      }
+          loader: "babel-loader",
+        },
+      },
     ],
 
     rules: [
@@ -39,17 +38,34 @@ module.exports = {
         use: [{ loader: "style-loader" }, { loader: "css-loader" }],
       },
     ],
+
+    /* rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "assets/img",
+          useRelativePath: true,
+        },
+      },
+    ] */
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.html",
-      chunks: []
+      chunks: [],
     }),
     new HtmlWebpackPlugin({
       filename: "login.html",
       template: "src/login.html",
-      chunks: []
-    })
+      chunks: [],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "products.html",
+      template: "src/products.html",
+      chunks: [],
+    }),
   ],
 };

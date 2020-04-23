@@ -6,6 +6,16 @@ header .logo{
     width: 60px;
 }
 
+header .nav-wrapper .container ul li .active {
+    border-radius: 5px;
+    background: white;
+    color: #000000;
+    
+}
+header .nav-wrapper .container ul li .active:hover{
+    background: none;
+    color: #fff;
+}
 .nav-wrapper{
     background: #741d51; /* Old browsers */ 
     background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */ 

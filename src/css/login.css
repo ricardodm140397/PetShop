@@ -4,6 +4,11 @@ body {
     background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
     background: linear-gradient(to right, #185a9d, #43cea2); 
 }
+
+#progressLoading{
+    display: none;
+}
+
 header {
     
     padding: 10px;
