@@ -1,11 +1,11 @@
-import '../../css/styles.css';
-import '../../../node_modules/normalize.css/normalize.css';
-import '../../../node_modules/materialize-css/dist/css/materialize.min.css'
+import "../../css/styles.css";
+import "../../../node_modules/normalize.css/normalize.css";
+import "../../../node_modules/materialize-css/dist/css/materialize.min.css";
 import { Interfaz, showCarShopping, objet } from "./interfaz.js";
 const interfaz = new Interfaz();
 export class Home {
   constructor() {
-    console.log('webpack');
+    console.log("webpack");
     this.createCarShopping();
   }
   createCarShopping() {

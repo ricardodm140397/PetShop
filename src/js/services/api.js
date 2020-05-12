@@ -1,16 +1,27 @@
-export class Api {
+import LocalStorage from "./localStorage.js";
+const localStotage = new LocalStorage();
+export default class Api {
   constructor() {
     /* url Se especifica el url de la ap que se va a consumir */
-    this.url = "";
+    this.url = "https://apipetshop.azurewebsites.net";
+    this.authToken = localStotage.getApiKey();
   }
 
   async get(table, id) {
+    const settings = {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: "Bearer" + " " + this.authToken,
+      },
+    };
     if (id !== undefined) {
-      let response = await fetch(`${this.url}/${table}/${id}`);
+      let response = await fetch(`${this.url}/${table}/${id}`, settings);
       let data = await response.json();
       return data;
     } else {
-      let response = await fetch(`${this.url}/${table}`);
+      let response = await fetch(`${this.url}/${table}`, settings);
       let data = await response.json();
       return data;
     }
@@ -21,6 +32,7 @@ export class Api {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
+        Authorization: "Bearer" + " " + this.authToken,
       },
       body: JSON.stringify(data),
     };
@@ -36,6 +48,9 @@ export class Api {
   async delet(table, data) {
     const settings = {
       method: "DELETE",
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: "Bearer" + " " + this.authToken,
     };
     try {
       const res = await fetch(`${this.url}/${table}/${id}`, settings);
@@ -46,12 +61,13 @@ export class Api {
     }
   }
 
-  async patch(table, data,id) {
+  async patch(table, data, id) {
     const settings = {
       method: "PATCH",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
+        Authorization: "Bearer" + " " + this.authToken,
       },
       body: JSON.stringify(data),
     };

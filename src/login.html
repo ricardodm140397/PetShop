@@ -26,19 +26,33 @@
             <form id="user" action="#" class="col s10 offset-s1">
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="usr" type="email" required />
+                  <input id="usr" type="email" class="validate" />
                   <label for="usr">Usuario:</label>
+                  <span
+                    class="helper-text"
+                    id="userRequire"
+                    data-error="Formato incorrecto"
+                    data-success="Correcto"
+                    >Requerido</span
+                  >
                 </div>
                 <div class="input-field col s12">
-                  <input id="pswd" type="password" required />
-                  <label for="pswd">Contraseña:</label>
+                  <input id="pass" type="password" class="validate" />
+                  <label for="pass">Contraseña:</label>
+                  <span
+                    id="passRequire"
+                    class="helper-text"
+                    data-error="Requerido"
+                    data-success="Correcto"
+                    >Requerido</span
+                  >
                 </div>
               </div>
 
               <div class="row">
                 <div class="col s6">
                   <button
-                    id="enviar"
+                    id="send"
                     class="btn waves-effect waves-light pink darken-2"
                     type="submit"
                     name="action"
